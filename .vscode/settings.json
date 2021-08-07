@@ -1,0 +1,4 @@
+{
+    "eslint.nodePath": "",
+    "eslint.workingDirectories": [{ "mode": "auto" }]
+}

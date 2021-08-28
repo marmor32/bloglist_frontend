@@ -11,7 +11,7 @@ const Blog = ({ blog, updateBlog, owner, deleteBlog }) => {
   const showWhenVisible = { display: visible ? '' : 'none' }
 
   return (
-    <div>
+    <div className='blog'>
       <div>
         {blog.title} {blog.author} <button onClick={toggleVisibility}>{display}</button>
       </div>

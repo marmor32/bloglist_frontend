@@ -25,7 +25,8 @@ describe('<Blog />', () => {
 
   test('renders content', () => {
 
-    expect(component.container).toHaveTextContent('test')
+    expect(component.container).toHaveTextContent(`${blog.author} ${blog.title}`)
+    expect(component.container).not.toHaveTextContent(`${likes} ${url}`)
   }) 
   
   test('clicking the button calls event handler once', () => {
@@ -35,5 +36,5 @@ describe('<Blog />', () => {
 
     expect(mockHandler.mock.calls).toHaveLength(1)
   })
-
+  
 })

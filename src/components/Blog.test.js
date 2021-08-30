@@ -43,7 +43,7 @@ describe('<Blog />', () => {
     const button = component.getByText('like')
     fireEvent.click(button)
     fireEvent.click(button)
-    expect(mockHandler.mock.length).toBe(2)
+    expect(mockHandler.mock.calls).toHaveLength(2)
     
   })
 

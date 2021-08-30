@@ -38,5 +38,13 @@ describe('<Blog />', () => {
     const div = component.container.querySelector('.blogInfo')
     expect(div).toHaveStyle('display: block')
   })
+  
+  test('clicking the like button twice', () => {
+    const button = component.getByText('like')
+    fireEvent.click(button)
+    fireEvent.click(button)
+    expect(mockHandler.mock.length).toBe(2)
+    
+  })
 
 })

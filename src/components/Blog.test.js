@@ -14,7 +14,7 @@ describe('<Blog />', () => {
     user: { id: '6107a9959a5d3652f8137cf7', username: 'manager', name: 'moses' },
     id: '60fe583fd6552b4d3889073d',
   }
-  
+
   beforeEach(() => {
 
     component = render(
@@ -30,12 +30,13 @@ describe('<Blog />', () => {
     expect(div).toHaveStyle('display: none')
   })
 
-  test('clicking the button calls event handler once', () => {
+  test('clicking the button show url and likes', () => {
 
-    const button = component.getByText('delete')
+    const button = component.getByText('view')
     fireEvent.click(button)
 
-    expect(mockHandler.mock.calls).toHaveLength(1)
+    const div = component.container.querySelector('.blogInfo')
+    expect(div).toHaveStyle('display:')
   })
 
 })

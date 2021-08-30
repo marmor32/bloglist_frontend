@@ -8,7 +8,7 @@ describe('<Togglable />', () => {
 
   beforeEach(() => {
     component = render(
-      <Togglable buttonLabel1="show...">
+      <Togglable buttonLabel="show...">
         <div className="testDiv" />
       </Togglable>
     )

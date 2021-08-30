@@ -71,7 +71,7 @@ const App = () => {
     <div>
       <h3>{user.username} is connected</h3>
       <button onClick={logout}>logout</button>
-      <Togglable buttonLabel1='create new blog' ref={blogFormRef}><BlogForm createBlog={createBlog} /></Togglable>
+      <Togglable buttonLabel='create new blog' ref={blogFormRef}><BlogForm createBlog={createBlog} /></Togglable>
     </div>
   )
 
@@ -82,7 +82,7 @@ const App = () => {
       {
         (user === null )
 
-          ? <Togglable buttonLabel1='login'> <Login setUser={setUser} setMsg={setMsg} /></Togglable>
+          ? <Togglable buttonLabel='login'> <Login setUser={setUser} setMsg={setMsg} /></Togglable>
           :userConnected()
       }
 

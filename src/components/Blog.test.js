@@ -39,6 +39,5 @@ test('clicking the button calls event handler once', () => {
   const button = component.getByText('delete')
   fireEvent.click(button)
 
-  component.debug()
   expect(mockHandler.mock.calls).toHaveLength(1)
 })

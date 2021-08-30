@@ -28,7 +28,7 @@ describe('<Blog />', () => {
 
     expect(component.container).toHaveTextContent('test')
   }) 
-  /*
+  
   test('clicking the button calls event handler once', () => {
 
     const button = component.getByText('delete')
@@ -36,5 +36,5 @@ describe('<Blog />', () => {
 
     expect(mockHandler.mock.calls).toHaveLength(1)
   })
-*/
+
 })

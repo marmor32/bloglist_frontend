@@ -5,6 +5,8 @@ import Blog from './Blog'
 
 describe('<Blog />', () => {
   let component
+      const mockHandler = jest.fn()
+
 
   beforeEach(() => {
     const blog = {
@@ -15,7 +17,6 @@ describe('<Blog />', () => {
       user: { id: '6107a9959a5d3652f8137cf7', username: 'manager', name: 'moses' },
       id: '60fe583fd6552b4d3889073d',
     }
-    const mockHandler = jest.fn()
     component = render(
       <Blog key={blog.id} blog={blog} updateBlog={mockHandler} owner={true} deleteBlog={mockHandler} />
     )
@@ -23,17 +24,17 @@ describe('<Blog />', () => {
   })
 
 
-test('renders content', () => {
+  test('renders content', () => {
 
-  expect(component.container).toHaveTextContent('test')
-})
+    expect(component.container).toHaveTextContent('test')
+  })
 
-test('clicking the button calls event handler once', () => {
+  test('clicking the button calls event handler once', () => {
 
-const button = component.getByText('delete')
-fireEvent.click(button)
+    const button = component.getByText('delete')
+    fireEvent.click(button)
 
-expect(mockHandler.mock.calls).toHaveLength(1)
-})
+    expect(mockHandler.mock.calls).toHaveLength(1)
+  })
 
 })

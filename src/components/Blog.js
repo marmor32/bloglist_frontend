@@ -5,7 +5,7 @@ const Blog = ({ blog, updateBlog, owner, deleteBlog }) => {
 
   const toggleVisibility = () => {
     setVisible(!visible)
-    display === 'view'? setDisplay('hide') : setDisplay('view')
+    display === 'view' ? setDisplay('hide') : setDisplay('view')
   }
 
   const showWhenVisible = { display: visible ? '' : 'none' }
@@ -15,10 +15,10 @@ const Blog = ({ blog, updateBlog, owner, deleteBlog }) => {
       <div>
         {blog.title} {blog.author} <button onClick={toggleVisibility}>{display}</button>
       </div>
-      <div style={showWhenVisible}>
+      <div style={showWhenVisible} className='blogInfo'>
         <p>url: {blog.url} </p>
         likes: {blog.likes} <button onClick={() => {blog.likes++; updateBlog(blog)}}>like</button>
-        <p>authoor name: {blog.user.name}</p>
+        <p>author name: {blog.user.name}</p>
         {owner && <button onClick={() => deleteBlog(blog)}>delete</button>}
       </div>
     </div>

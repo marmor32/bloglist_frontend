@@ -25,8 +25,9 @@ describe('<Blog />', () => {
 
   test('renders content', () => {
 
-    expect(component.container).toHaveTextContent(`${blog.author} ${blog.title}`)
-    expect(component.container).not.toHaveTextContent(`${likes} ${url}`)
+    expect(component.container).toHaveTextContent(`${blog.title} ${blog.author}`)
+    const div = component.container.querySelector('.blogInfo')
+    expect(div).toHaveStyle('display: none')
   })
 
   test('clicking the button calls event handler once', () => {

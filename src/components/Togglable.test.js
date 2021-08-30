@@ -12,7 +12,7 @@ describe('<Togglable />', () => {
         <div className="testDiv" />
       </Togglable>
     )
-          component.render()
+    component.debug()
   })
 
   test('renders its children', () => {

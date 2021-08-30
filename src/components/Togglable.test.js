@@ -12,10 +12,11 @@ describe('<Togglable />', () => {
         <div className="testDiv" />
       </Togglable>
     )
-    component.debug()
   })
 
   test('renders its children', () => {
+        component.debug()
+
     expect(
       component.container.querySelector('.testDiv')
     ).toBeDefined()

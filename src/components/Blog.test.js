@@ -20,7 +20,6 @@ describe('<Blog />', () => {
     component = render(
       <Blog key={blog.id} blog={blog} updateBlog={mockHandler} owner={true} deleteBlog={mockHandler} />
     )
-    component.debug()
   })
 
 

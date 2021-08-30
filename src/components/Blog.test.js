@@ -36,7 +36,7 @@ describe('<Blog />', () => {
     fireEvent.click(button)
 
     const div = component.container.querySelector('.blogInfo')
-    expect(div).toHaveStyle('display:')
+    expect(div).toHaveStyle('display: block')
   })
 
 })

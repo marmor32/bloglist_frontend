@@ -5,7 +5,7 @@ import Blog from './Blog'
 
 describe('<Blog />', () => {
   let component
-      const mockHandler = jest.fn()
+  const mockHandler = jest.fn()
 
 
   beforeEach(() => {
@@ -27,8 +27,8 @@ describe('<Blog />', () => {
   test('renders content', () => {
 
     expect(component.container).toHaveTextContent('test')
-  })
-
+  }) 
+  /*
   test('clicking the button calls event handler once', () => {
 
     const button = component.getByText('delete')
@@ -36,5 +36,5 @@ describe('<Blog />', () => {
 
     expect(mockHandler.mock.calls).toHaveLength(1)
   })
-
+*/
 })

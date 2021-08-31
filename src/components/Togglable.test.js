@@ -15,7 +15,6 @@ describe('<Togglable />', () => {
   })
 
   test('renders its children', () => {
-        component.debug()
 
     expect(
       component.container.querySelector('.testDiv')

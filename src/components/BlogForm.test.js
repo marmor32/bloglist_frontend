@@ -17,10 +17,12 @@ test('form submit args', async () => {
   fireEvent.change(author, { target: { value: 'test author' } })
   fireEvent.change(url, { target: { value: 'test url' } })
   fireEvent.submit(form)
+  component.debug()
   await waitFor(() => {
     expect(mockHandler.mock.calls).toHaveLength(1)
     expect(mockHandler[0][0].title).toBe('test title')
     expect(mockHandler[0][0].author).toBe('test author')
     expect(mockHandler[0][0].url).toBe('test url')
+    component.debug()
   })
 })

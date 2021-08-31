@@ -18,6 +18,7 @@ test('form submit args', async () => {
   fireEvent.change(url, { target: { value: 'test url' } })
   fireEvent.submit(form)
   component.debug()
+  console.log(mockHandler[0][0])
   await waitFor(() => {
     expect(mockHandler.mock.calls).toHaveLength(1)
     expect(mockHandler[0][0].title).toBe('test title')

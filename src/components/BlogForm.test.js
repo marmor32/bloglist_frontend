@@ -1,6 +1,7 @@
 import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
 import { render, fireEvent } from '@testing-library/react'
+import { act } from 'react-dom/test-utils'
 import BlogForm from './BlogForm'
 
 describe('<BlogForm />', () => {
@@ -17,10 +18,10 @@ describe('<BlogForm />', () => {
     const url = component.container.querySelector('#url')
     const form = component.container.querySelector('form')
     act(() => {
-    fireEvent.change(title, { target: { value: 'test title' } })
-    fireEvent.change(author, { target: { value: 'test author' } })
-    fireEvent.change(url, { target: { value: 'test url' } })
-    fireEvent.submit(form)
+      fireEvent.change(title, { target: { value: 'test title' } })
+      fireEvent.change(author, { target: { value: 'test author' } })
+      fireEvent.change(url, { target: { value: 'test url' } })
+      fireEvent.submit(form)
     })
 
     expect(mockHandler.mock.calls).toHaveLength(1)

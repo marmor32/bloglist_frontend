@@ -17,10 +17,8 @@ test('form submit args', () => {
   fireEvent.change(author, { target: { value: 'test author' } })
   fireEvent.change(url, { target: { value: 'test url' } })
   fireEvent.submit(form)
-  //  await waitFor(() => {
   expect(mockHandler.mock.calls).toHaveLength(1)
   expect(mockHandler.mock.calls[0][0].title).toBe('test title')
   expect(mockHandler.mock.calls[0][0].author).toBe('test author')
   expect(mockHandler.mock.calls[0][0].url).toBe('test url')
-  //  })
 })
